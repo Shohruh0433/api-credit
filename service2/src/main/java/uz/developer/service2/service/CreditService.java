@@ -18,6 +18,7 @@ import uz.developer.service2.repository.CreditRepository;
 import uz.developer.service2.repository.SurveyRepository;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -88,14 +89,17 @@ RestTemplate restTemplate;
 
             Survey survey = new Survey();
             survey.setCreditAmount(creditDto.getCreditAmount());
-            survey.setSalary(survey.getSalary());
+            survey.setSalary(creditDto.getSalary());
             survey.setDateOfBirth(passport.getDateOfBirth());
             survey.setFirstName(passport.getFirstName());
             survey.setLastName(passport.getLastName());
             survey.setPassportSeria(passport.getPassportSeria());
             survey.setPassportNumber(passport.getPassportNumber());
+            Date date=new Date();
+            survey.setCreateSurvey(date);
             survey.setPinfl(passport.getPinfl());
-            surveyRepository.save(survey);
+
+                        surveyRepository.save(survey);
             surveyRepository.save(survey);
             return ResponseEntity.ok("Hurmatli " + passport.getFirstName() + " " + passport.getLastName() + " sizning arizangiz qabul qilindi tez orada xodimlarimiz siz bilan bog'lanishadi");
         }

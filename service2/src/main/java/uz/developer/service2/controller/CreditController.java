@@ -35,15 +35,7 @@ public class CreditController {
         return creditService.getCredit(creditDto);
     }
 
-//    @RequestMapping(value = "/get-passport-with-pinfl", method = RequestMethod.POST)
-//    public ResponseEntity getPassport(@RequestBody Credit1 credit){
-//        Long pinfl =  credit.getPinfl();
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-//        HttpEntity<Long> entity = new HttpEntity<Long>(pinfl, headers);
-//        return ResponseEntity.ok(restTemplate.exchange("http://localhost:8081/api/passport/get-pinfl/" +pinfl, HttpMethod.GET,entity,String.class).getBody());
-//
-//    }
+
 
 
 

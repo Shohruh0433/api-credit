@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 @Entity
 @Data
@@ -25,6 +26,7 @@ public class Survey {
     private Long pinfl;
     private double salary;
     private double creditAmount;
+    private Date createSurvey;
 
 
 }
